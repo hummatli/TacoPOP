@@ -23,6 +23,7 @@
 		75DF55011F2240040031309B /* NibLoadableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75DF55001F2240040031309B /* NibLoadableView.swift */; };
 		75DF55031F2240F10031309B /* UICollectionView+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75DF55021F2240F10031309B /* UICollectionView+Ext.swift */; };
 		75DF55051F2247B70031309B /* MutableColection+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75DF55041F2247B70031309B /* MutableColection+Ext.swift */; };
+		75DF55071F224BCE0031309B /* Shakeable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75DF55061F224BCE0031309B /* Shakeable.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,6 +57,7 @@
 		75DF55001F2240040031309B /* NibLoadableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NibLoadableView.swift; sourceTree = "<group>"; };
 		75DF55021F2240F10031309B /* UICollectionView+Ext.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UICollectionView+Ext.swift"; sourceTree = "<group>"; };
 		75DF55041F2247B70031309B /* MutableColection+Ext.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "MutableColection+Ext.swift"; sourceTree = "<group>"; };
+		75DF55061F224BCE0031309B /* Shakeable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Shakeable.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -161,6 +163,7 @@
 				75DF54F21F2203ED0031309B /* DropShadow.swift */,
 				75DF54FE1F223E6B0031309B /* ReusableView.swift */,
 				75DF55001F2240040031309B /* NibLoadableView.swift */,
+				75DF55061F224BCE0031309B /* Shakeable.swift */,
 			);
 			name = Protocols;
 			sourceTree = "<group>";
@@ -290,6 +293,7 @@
 				75DF54F91F222A740031309B /* DataService.swift in Sources */,
 				75DF55051F2247B70031309B /* MutableColection+Ext.swift in Sources */,
 				75DF54F71F2224720031309B /* Taco.swift in Sources */,
+				75DF55071F224BCE0031309B /* Shakeable.swift in Sources */,
 				75DF54F51F2207D60031309B /* HeaderView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
