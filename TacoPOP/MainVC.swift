@@ -20,14 +20,19 @@ class MainVC: UIViewController, DataServiceDelegate {
 
         ds.delegate = self
         ds.loadDeliciousTacoData()
+        ds.tacoArray.shuffle()
         
         collectionView.delegate = self
         collectionView.dataSource = self
         
         headerView.addDropShadow()
         
-        let nib = UINib(nibName: "TacoCell", bundle: nil)
-        collectionView.register(nib, forCellWithReuseIdentifier: "TacoCell")
+        //Old way
+//        let nib = UINib(nibName: "TacoCell", bundle: nil)
+//        collectionView.register(nib, forCellWithReuseIdentifier: "TacoCell")
+        
+        //New way
+        collectionView.register(TacoCell.self)
     }
 
     func deliciousTacoDataLoaded() {
@@ -50,13 +55,19 @@ extension MainVC: UICollectionViewDelegate, UICollectionViewDataSource, UICollec
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+      
+        //Old way
+//        if let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "TacoCell", for: indexPath) as? TacoCell {
+//            cell.configuringCell(taco: ds.tacoArray[indexPath.row])
+//            return cell
+//        }
+//        
+//        return UICollectionViewCell()
         
-        if let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "TacoCell", for: indexPath) as? TacoCell {
-            cell.configuringCell(taco: ds.tacoArray[indexPath.row])
-            return cell
-        }
-        
-        return UICollectionViewCell()
+        //New way
+        let cell = collectionView.dequeueReusableCell(forIndexPath: indexPath) as TacoCell
+        cell.configuringCell(taco: ds.tacoArray[indexPath.row])
+        return cell
     }
     
     func collectionView(_ collectionView: UICollectionView, didDeselectItemAt indexPath: IndexPath) {
